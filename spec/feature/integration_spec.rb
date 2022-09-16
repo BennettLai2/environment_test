@@ -38,7 +38,6 @@ RSpec.describe 'Creating a book', type: :feature do
     visit new_book_path
     fill_in 'Title', with: 'harry potter'
     fill_in 'Author', with: 'J.K. Rolling'
-    fill_in 'Price', with: 42.0
     fill_in 'Date', with: Date.new(2022,9,8)
     click_on 'Create Book'
     expect(page).to have_content("Price can't be blank")
@@ -49,7 +48,6 @@ RSpec.describe 'Creating a book', type: :feature do
     fill_in 'Title', with: 'harry potter'
     fill_in 'Author', with: 'J.K. Rolling'
     fill_in 'Price', with: 42.0
-    fill_in 'Date', with: Date.new(2022,9,8)
     click_on 'Create Book'
     expect(page).to have_content("Date can't be blank")
   end
